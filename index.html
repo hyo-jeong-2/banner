@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner{
+            position: relative;
+            width: 300px;
+            height: 150px;
+            background: greenyellow;
+            color: #fff;
+            text-shadow: 1px 1px 2px #333;
+            display: block;
+            background-image: url(images/drink.png),
+                              url(images/main.gif);
+            background-repeat: no-repeat;
+            background-position: left;
+            /*clipping 나간 영역 가리기*/
+            overflow: hidden;
+            
+    
+        }
+        .logo{
+            width: 200px;
+            height: 300px;
+            background: url(images/logo.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            animation-name: logo;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes logo{
+            /*등장*/
+            0%{right: -800px;}
+
+            10%{right: 20px;}
+            /*대기*/
+            100%{}
+        }
+        .banner .url{
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.hollys.co.kr/" class="banner">
+    <div class="logo"></div>
+    <strong class="url">www.hollys.co.kr</strong>
+    </a>
+</body>
+</html>
